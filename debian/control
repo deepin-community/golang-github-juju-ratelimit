@@ -1,0 +1,26 @@
+Source: golang-github-juju-ratelimit
+Maintainer: Debian Go Packaging Team <pkg-go-maintainers@lists.alioth.debian.org>
+Uploaders: Tim Potter <tpot@hpe.com>,
+           Anthony Fok <foka@debian.org>
+Section: devel
+Testsuite: autopkgtest-pkg-go
+Priority: optional
+Build-Depends: debhelper (>= 11),
+               dh-golang,
+               golang-any,
+               golang-check.v1-dev
+Standards-Version: 4.1.3
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-go/packages/golang-github-juju-ratelimit.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-go/packages/golang-github-juju-ratelimit.git
+Homepage: https://github.com/juju/ratelimit
+XS-Go-Import-Path: github.com/juju/ratelimit
+
+Package: golang-github-juju-ratelimit-dev
+Architecture: all
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Description: Efficient token-bucket-based rate limiter module for Go
+ The ratelimit package provides an efficient token bucket
+ implementation in Go. The token bucket algorithm implements a
+ method for ensuring a reader or writer does not exceed a
+ specified rate limit.
